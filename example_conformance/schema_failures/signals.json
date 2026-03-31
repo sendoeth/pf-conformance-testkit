@@ -1,0 +1,97 @@
+[
+  {
+    "producer_id": "test",
+    "timestamp": "2026-03-30T12:00:00Z"
+  },
+  {
+    "signal_id": "bad-1",
+    "producer_id": "test",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 1.5,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0"
+  },
+  {
+    "signal_id": "bad-2",
+    "producer_id": "test",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "sideways",
+    "confidence": 0.5,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0"
+  },
+  {
+    "signal_id": "bad-3",
+    "producer_id": "test",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.5,
+    "horizon_hours": 24,
+    "action": "HOLD",
+    "schema_version": "1.0.0"
+  },
+  {
+    "signal_id": "bad-4",
+    "producer_id": "test",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.5,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0"
+  },
+  {
+    "signal_id": "bad-5",
+    "producer_id": "test",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "btc",
+    "direction": "bullish",
+    "confidence": 0.5,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0"
+  },
+  {
+    "signal_id": "bad-6",
+    "producer_id": "test",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.5,
+    "horizon_hours": 0,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0"
+  },
+  {
+    "signal_id": "test-BTC-0099",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.6,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "2c2324a4a102ce82e35077890636104f6a1ca2e6826717787b15ce4858f2c906"
+  }
+]

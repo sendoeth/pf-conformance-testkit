@@ -1,0 +1,82 @@
+{
+  "policy_version": "1.0.0",
+  "producer_id": "test-producer",
+  "gates": {
+    "regime_gate": {
+      "enabled": true,
+      "allowed_regimes": [
+        "NEUTRAL",
+        "DIVERGENCE"
+      ]
+    },
+    "duration_gate": {
+      "enabled": true,
+      "default_min_days": 15
+    },
+    "confidence_gate": {
+      "enabled": true,
+      "default_min_confidence": 0.3
+    },
+    "voi_gate": {
+      "enabled": true,
+      "min_voi": 0.0,
+      "use_hazard_adjustment": false
+    },
+    "weak_symbol_gate": {
+      "enabled": true,
+      "severity_threshold": "MODERATE"
+    }
+  },
+  "symbols": {
+    "BTC": {
+      "min_duration_days": 10,
+      "min_confidence": 0.3,
+      "weak_symbol_policy": "NONE",
+      "accuracy": 0.55
+    },
+    "ETH": {
+      "min_duration_days": 12,
+      "min_confidence": 0.3,
+      "weak_symbol_policy": "NONE",
+      "accuracy": 0.53
+    },
+    "SOL": {
+      "min_duration_days": 15,
+      "min_confidence": 0.3,
+      "weak_symbol_policy": "INVERT",
+      "accuracy": 0.44,
+      "weakness_score": 0.7,
+      "weakness_severity": "SEVERE",
+      "inversion_justified": true,
+      "inversion_p_value": 0.0001
+    },
+    "LINK": {
+      "min_duration_days": 15,
+      "min_confidence": 0.3,
+      "weak_symbol_policy": "NONE",
+      "accuracy": 0.54
+    }
+  },
+  "duration_buckets": [
+    {
+      "label": "early",
+      "min_days": 0,
+      "max_days": 12
+    },
+    {
+      "label": "mid",
+      "min_days": 12,
+      "max_days": 15
+    },
+    {
+      "label": "mature",
+      "min_days": 15,
+      "max_days": 18
+    },
+    {
+      "label": "late",
+      "min_days": 18,
+      "max_days": 9999
+    }
+  ]
+}

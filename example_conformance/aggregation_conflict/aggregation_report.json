@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "generated_at": "2026-03-30T12:00:00Z",
+    "protocol_version": "1.0.0",
+    "signal_schema_version": "1.0.0",
+    "resolution_protocol_version": "1.0.0",
+    "routing_protocol_version": "1.0.0",
+    "aggregation_protocol_version": "1.0.0",
+    "n_producers": 3,
+    "n_active": 3,
+    "aggregation_method": "reputation_weighted_vote",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "duration_days": 20,
+      "regime_confidence": 0.85
+    },
+    "quorum_threshold": 2,
+    "conflict_threshold": 0.7
+  },
+  "summary": {
+    "total_symbols": 1,
+    "total_emit": 0,
+    "total_withhold": 0,
+    "total_invert": 0,
+    "total_conflict": 1,
+    "consensus_rate": 0.0,
+    "mean_disagreement": 0.85,
+    "producer_weight_distribution": {
+      "max_weight": 0.45,
+      "min_weight": 0.2,
+      "hhi": 0.38
+    }
+  },
+  "decisions": [
+    {
+      "symbol": "BTC",
+      "consensus_action": "CONFLICT",
+      "consensus_direction": "undetermined",
+      "consensus_confidence": 0.55,
+      "weighted_score": 0.05,
+      "n_producers": 3,
+      "n_active": 3,
+      "quorum_met": true,
+      "disagreement": {
+        "index": 0.85,
+        "level": "EXTREME",
+        "n_bullish": 2,
+        "n_bearish": 1,
+        "n_withhold": 0,
+        "direction_split": 0.333,
+        "weighted_direction_split": 0.3
+      },
+      "contributions": [
+        {
+          "producer_id": "alpha",
+          "signal_id": "a-1",
+          "direction": "bullish",
+          "confidence": 0.7,
+          "action": "EXECUTE",
+          "weight": 0.45,
+          "weighted_vote": 0.315
+        },
+        {
+          "producer_id": "beta",
+          "signal_id": "b-1",
+          "direction": "bearish",
+          "confidence": 0.8,
+          "action": "EXECUTE",
+          "weight": 0.35,
+          "weighted_vote": -0.28
+        },
+        {
+          "producer_id": "gamma",
+          "signal_id": "g-1",
+          "direction": "bullish",
+          "confidence": 0.4,
+          "action": "EXECUTE",
+          "weight": 0.2,
+          "weighted_vote": 0.08
+        }
+      ]
+    }
+  ],
+  "protocol_version": "1.0.0"
+}

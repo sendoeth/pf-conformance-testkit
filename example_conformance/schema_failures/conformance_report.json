@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "testkit_version": "1.0.0",
+    "protocol_version": "1.0.0",
+    "generated_at": "2026-03-31T17:03:06.872Z",
+    "started_at": "2026-03-31T17:03:06.872Z",
+    "artifact_source": "local_directory",
+    "artifact_path": "/home/postfiat/pf-conformance-testkit/example_conformance/schema_failures"
+  },
+  "readiness_grade": {
+    "grade": "F",
+    "composite_score": 0.464,
+    "n_pass": 3,
+    "n_fail": 1,
+    "n_warn": 0,
+    "n_skip": 5,
+    "grade_thresholds": {
+      "A": 0.9,
+      "B": 0.75,
+      "C": 0.55,
+      "D": 0.35,
+      "F": 0.0
+    },
+    "protocol_weights": {
+      "signal_schema": 0.2,
+      "routing_protocol": 0.1,
+      "resolution_protocol": 0.15,
+      "aggregation_protocol": 0.08,
+      "proof_protocol": 0.15,
+      "lifecycle_pipeline": 0.07,
+      "consumer_audit": 0.1,
+      "discovery_protocol": 0.07,
+      "consumer_quickstart": 0.08
+    },
+    "per_protocol_scores": {
+      "signal_schema": {
+        "status": "FAIL",
+        "score": 0.0,
+        "weight": 0.2
+      },
+      "routing_protocol": {
+        "status": "SKIP",
+        "score": 0.3,
+        "weight": 0.1
+      },
+      "resolution_protocol": {
+        "status": "SKIP",
+        "score": 0.3,
+        "weight": 0.15
+      },
+      "aggregation_protocol": {
+        "status": "SKIP",
+        "score": 0.3,
+        "weight": 0.08
+      },
+      "proof_protocol": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.15
+      },
+      "lifecycle_pipeline": {
+        "status": "SKIP",
+        "score": 0.3,
+        "weight": 0.07
+      },
+      "consumer_audit": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.1
+      },
+      "discovery_protocol": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.07
+      },
+      "consumer_quickstart": {
+        "status": "SKIP",
+        "score": 0.3,
+        "weight": 0.08
+      }
+    }
+  },
+  "protocol_results": {
+    "signal_schema": {
+      "display_name": "pf-signal-schema",
+      "status": "FAIL",
+      "violations": [
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[0].signal_id",
+          "message": "Required field 'signal_id' is missing",
+          "remediation": "Add 'signal_id' to the signal object. See pf-signal-schema README for field specifications.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[0].symbol",
+          "message": "Required field 'symbol' is missing",
+          "remediation": "Add 'symbol' to the signal object. See pf-signal-schema README for field specifications.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[0].direction",
+          "message": "Required field 'direction' is missing",
+          "remediation": "Add 'direction' to the signal object. See pf-signal-schema README for field specifications.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[0].confidence",
+          "message": "Required field 'confidence' is missing",
+          "remediation": "Add 'confidence' to the signal object. See pf-signal-schema README for field specifications.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[0].horizon_hours",
+          "message": "Required field 'horizon_hours' is missing",
+          "remediation": "Add 'horizon_hours' to the signal object. See pf-signal-schema README for field specifications.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[0].action",
+          "message": "Required field 'action' is missing",
+          "remediation": "Add 'action' to the signal object. See pf-signal-schema README for field specifications.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[0].schema_version",
+          "message": "Required field 'schema_version' is missing",
+          "remediation": "Add 'schema_version' to the signal object. See pf-signal-schema README for field specifications.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[1].confidence",
+          "message": "Confidence 1.5 out of range [0.0, 1.0]",
+          "remediation": "Set confidence to a value between 0.0 and 1.0. This is a probability, not a percentage.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[2].direction",
+          "message": "Invalid direction 'sideways'. Must be 'bullish' or 'bearish'",
+          "remediation": "Set direction to 'bullish' or 'bearish'.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[3].action",
+          "message": "Invalid action 'HOLD'. Must be EXECUTE, WITHHOLD, or INVERT",
+          "remediation": "Set action to one of: EXECUTE, WITHHOLD, INVERT.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[4].weak_symbol",
+          "message": "action=INVERT requires weak_symbol metadata",
+          "remediation": "Add weak_symbol object with weakness_score, severity, original_direction, and inversion_p_value.",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[5].symbol",
+          "message": "Symbol 'btc' must be uppercase alphanumeric (e.g., BTC, ETH)",
+          "remediation": "Use uppercase alphanumeric symbols only (regex: ^[A-Z0-9]+$).",
+          "severity": "ERROR"
+        },
+        {
+          "protocol": "signal_schema",
+          "json_path": "$.signals[6].horizon_hours",
+          "message": "horizon_hours 0 out of range [1, 8760]",
+          "remediation": "Set horizon_hours between 1 (1 hour) and 8760 (1 year).",
+          "severity": "ERROR"
+        }
+      ],
+      "details": {
+        "n_signals": 8,
+        "n_passed": 1,
+        "n_failed": 7,
+        "pass_rate": 0.125,
+        "level_distribution": {
+          "MINIMAL": 6,
+          "STANDARD": 0,
+          "FULL": 1,
+          "INCOMPLETE": 1
+        },
+        "duplicate_signal_ids": 0
+      },
+      "n_errors": 13,
+      "n_warnings": 0,
+      "dependencies": []
+    },
+    "routing_protocol": {
+      "display_name": "pf-routing-protocol",
+      "status": "SKIP",
+      "violations": [],
+      "details": {
+        "reason": "Upstream dependency failed: pf-signal-schema",
+        "skipped_due_to": [
+          "signal_schema"
+        ]
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "signal_schema"
+      ]
+    },
+    "resolution_protocol": {
+      "display_name": "pf-resolution-protocol",
+      "status": "SKIP",
+      "violations": [],
+      "details": {
+        "reason": "Upstream dependency failed: pf-signal-schema",
+        "skipped_due_to": [
+          "signal_schema"
+        ]
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "signal_schema"
+      ]
+    },
+    "aggregation_protocol": {
+      "display_name": "pf-aggregation-protocol",
+      "status": "SKIP",
+      "violations": [],
+      "details": {
+        "reason": "No aggregation artifacts provided"
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "resolution_protocol",
+        "routing_protocol"
+      ]
+    },
+    "proof_protocol": {
+      "display_name": "pf-proof-protocol",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "n_violations": 0,
+        "freshness_grade": "LIVE",
+        "drift_status": "STABLE"
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "resolution_protocol"
+      ]
+    },
+    "lifecycle_pipeline": {
+      "display_name": "pf-lifecycle-pipeline",
+      "status": "SKIP",
+      "violations": [],
+      "details": {
+        "reason": "No lifecycle report provided"
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "proof_protocol"
+      ]
+    },
+    "consumer_audit": {
+      "display_name": "pf-consumer-audit",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "n_violations": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "proof_protocol",
+        "routing_protocol",
+        "aggregation_protocol"
+      ]
+    },
+    "discovery_protocol": {
+      "display_name": "pf-discovery-protocol",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "entry_violations": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "resolution_protocol",
+        "proof_protocol"
+      ]
+    },
+    "consumer_quickstart": {
+      "display_name": "pf-consumer-quickstart",
+      "status": "SKIP",
+      "violations": [],
+      "details": {
+        "reason": "Upstream dependency failed: pf-signal-schema",
+        "skipped_due_to": [
+          "signal_schema"
+        ]
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "signal_schema",
+        "routing_protocol",
+        "resolution_protocol",
+        "aggregation_protocol",
+        "proof_protocol",
+        "lifecycle_pipeline",
+        "consumer_audit",
+        "discovery_protocol"
+      ]
+    }
+  },
+  "cross_protocol_checks": {
+    "violations": [
+      {
+        "protocol": "cross_protocol",
+        "json_path": "$.discovery_entry.symbol_coverage",
+        "message": "Signals contain symbols not in discovery coverage: ['btc']",
+        "remediation": "Update symbol_coverage in discovery entry to include all emitted symbols.",
+        "severity": "WARNING"
+      }
+    ],
+    "n_errors": 0,
+    "n_warnings": 1,
+    "n_info": 0
+  },
+  "summary": {
+    "total_protocols": 9,
+    "passed": 3,
+    "warned": 0,
+    "failed": 1,
+    "skipped": 5,
+    "total_violations": 14,
+    "total_errors": 13,
+    "total_warnings": 1
+  },
+  "limitations": [
+    {
+      "id": "SMALL_SIGNAL_SAMPLE",
+      "description": "Only 8 signals provided. Statistical validation (Wilson CIs, Brier decomposition) requires >= 30 signals for stability.",
+      "bias_direction": "INDETERMINATE",
+      "bias_magnitude": "Sample size 8 produces wide confidence intervals. Pass/fail determination has high uncertainty."
+    },
+    {
+      "id": "FOUNDATION_FAILURE",
+      "description": "Signal schema validation failed. All downstream protocol checks that depend on valid signals may produce unreliable results.",
+      "bias_direction": "UNDERSTATED_FAILURES",
+      "bias_magnitude": "Downstream SKIP results mask additional failures that would surface with valid signals."
+    },
+    {
+      "id": "CASCADE_SKIPS",
+      "description": "3 protocol(s) skipped due to upstream dependency failure. These protocols were not tested.",
+      "bias_direction": "UNDERSTATED_FAILURES",
+      "bias_magnitude": "Fix upstream failures first to unlock testing of 3 additional protocol(s)."
+    }
+  ],
+  "protocol_version": "1.0.0"
+}

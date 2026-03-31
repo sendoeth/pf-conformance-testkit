@@ -1,0 +1,108 @@
+[
+  {
+    "signal_id": "test-BTC-0000",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.3,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 15,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "1742b07b6d2243608e8a7cffdf9686712caf2c371e8207ef62c24fcd68db9832"
+  },
+  {
+    "signal_id": "test-ETH-0001",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.29,
+    "horizon_hours": 24,
+    "action": "WITHHOLD",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 15,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "13374a5e4b22b47b4eca2d34ad106a2bd44608ac49836cf7098691a90e68f481"
+  },
+  {
+    "signal_id": "test-SOL-0002",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.5,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 15,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "b71f0a3d4a406f6c333295f2ad5a953f2129373b4d57747623c964135bf363a3",
+    "weak_symbol": {
+      "weakness_score": 0.7,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "test-LINK-0003",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "LINK",
+    "direction": "bullish",
+    "confidence": 0.6,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 14,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "5271c218c2dec4cb74da7190df20798cffdc28e601f75d0ccbd7dea86050b79d"
+  }
+]

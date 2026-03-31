@@ -1,0 +1,19 @@
+{
+  "scenario": "aggregation_conflict",
+  "description": "Multi-producer aggregation with EXTREME disagreement triggering CONFLICT action.",
+  "expected_outcomes": {
+    "signal_schema": "PASS",
+    "routing_protocol": "SKIP",
+    "resolution_protocol": "SKIP",
+    "aggregation_protocol": "PASS",
+    "proof_protocol": "SKIP",
+    "lifecycle_pipeline": "SKIP",
+    "consumer_audit": "SKIP",
+    "discovery_protocol": "SKIP",
+    "consumer_quickstart": "SKIP",
+    "expected_grade": "C",
+    "cross_protocol_errors": 0
+  },
+  "generator_version": "1.0.0",
+  "generated_at": "2026-03-30T12:00:00Z"
+}

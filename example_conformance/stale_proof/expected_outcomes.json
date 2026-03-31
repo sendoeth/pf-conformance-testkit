@@ -1,0 +1,20 @@
+{
+  "scenario": "stale_proof",
+  "description": "Proof surface is EXPIRED with DEGRADED drift. Proof protocol PASS (semantic warnings only, no schema errors). Cross-protocol catches ALIVE+EXPIRED inconsistency.",
+  "expected_outcomes": {
+    "signal_schema": "PASS",
+    "routing_protocol": "SKIP",
+    "resolution_protocol": "SKIP",
+    "aggregation_protocol": "SKIP",
+    "proof_protocol": "PASS",
+    "lifecycle_pipeline": "SKIP",
+    "consumer_audit": "SKIP",
+    "discovery_protocol": "PASS",
+    "consumer_quickstart": "SKIP",
+    "expected_grade": "C",
+    "cross_protocol_errors": 0,
+    "cross_protocol_warnings": 1
+  },
+  "generator_version": "1.0.0",
+  "generated_at": "2026-03-30T12:00:00Z"
+}

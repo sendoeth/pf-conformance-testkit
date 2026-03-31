@@ -1,0 +1,20 @@
+{
+  "scenario": "cross_protocol_issues",
+  "description": "Signals pass schema but have cross-protocol inconsistencies: orphaned resolved signals, mismatched producer IDs, symbol coverage gaps.",
+  "expected_outcomes": {
+    "signal_schema": "PASS",
+    "routing_protocol": "PASS",
+    "resolution_protocol": "PASS",
+    "aggregation_protocol": "SKIP",
+    "proof_protocol": "PASS",
+    "lifecycle_pipeline": "SKIP",
+    "consumer_audit": "SKIP",
+    "discovery_protocol": "PASS",
+    "consumer_quickstart": "SKIP",
+    "expected_grade": "B",
+    "cross_protocol_errors": 0,
+    "cross_protocol_warnings": 2
+  },
+  "generator_version": "1.0.0",
+  "generated_at": "2026-03-30T12:00:00Z"
+}

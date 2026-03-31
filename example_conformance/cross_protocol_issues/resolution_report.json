@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "producer_id": "different-producer",
+    "generated_at": "2026-03-30T12:00:00Z",
+    "protocol_version": "1.0.0",
+    "signal_schema_version": "1.0.0",
+    "date_range": {
+      "start": "2026-03-01T00:00:00Z",
+      "end": "2026-03-30T12:00:00Z"
+    },
+    "price_source": "yahoo_finance"
+  },
+  "signal_summary": {
+    "total_signals": 550,
+    "total_resolved": 500,
+    "total_unresolved": 50,
+    "resolution_rate": 0.9091
+  },
+  "overall": {
+    "brier_score": 0.247,
+    "reliability": 0.002,
+    "resolution": 0.005,
+    "uncertainty": 0.25,
+    "check_sum": 0.247,
+    "accuracy": {
+      "point": 0.55,
+      "lower": 0.52,
+      "upper": 0.5800000000000001,
+      "n": 500
+    },
+    "calibration_slope": 0.97,
+    "sharpness": 0.03
+  },
+  "per_symbol": {
+    "BTC": {
+      "symbol": "BTC",
+      "n": 150,
+      "brier_decomposition": {
+        "brier_score": 0.24,
+        "reliability": 0.002,
+        "resolution": 0.005
+      },
+      "karma": {
+        "cumulative_karma": 5.2,
+        "mean_karma": 0.035
+      }
+    },
+    "ETH": {
+      "symbol": "ETH",
+      "n": 130,
+      "brier_decomposition": {
+        "brier_score": 0.24,
+        "reliability": 0.002,
+        "resolution": 0.004
+      },
+      "karma": {
+        "cumulative_karma": 3.8,
+        "mean_karma": 0.029
+      }
+    },
+    "SOL": {
+      "symbol": "SOL",
+      "n": 110,
+      "brier_decomposition": {
+        "brier_score": 0.26,
+        "reliability": 0.003,
+        "resolution": 0.003
+      },
+      "karma": {
+        "cumulative_karma": -2.1,
+        "mean_karma": -0.019
+      }
+    },
+    "LINK": {
+      "symbol": "LINK",
+      "n": 110,
+      "brier_decomposition": {
+        "brier_score": 0.23,
+        "reliability": 0.001,
+        "resolution": 0.006
+      },
+      "karma": {
+        "cumulative_karma": 4.5,
+        "mean_karma": 0.041
+      }
+    }
+  },
+  "karma": {
+    "cumulative_karma": 11.4,
+    "mean_karma": 0.0228,
+    "predicted_karma": 12.0,
+    "realized_karma": 11.4,
+    "prediction_error": 0.05
+  },
+  "confidence_weighted_accuracy": {
+    "cw_accuracy": 0.56,
+    "binary_accuracy": 0.55,
+    "delta": 0.01
+  },
+  "reputation": {
+    "composite_score": 0.68,
+    "grade": "B",
+    "components": {
+      "calibration_quality": {
+        "score": 0.992,
+        "weight": 0.2
+      },
+      "binary_accuracy": {
+        "score": 0.25,
+        "weight": 0.15
+      },
+      "cw_accuracy": {
+        "score": 0.3,
+        "weight": 0.2
+      },
+      "abstention_discipline": {
+        "score": 0.15,
+        "weight": 0.1
+      },
+      "confidence_sharpness": {
+        "score": 0.6,
+        "weight": 0.1
+      },
+      "karma_validation": {
+        "score": 0.95,
+        "weight": 0.1
+      },
+      "monotonicity": {
+        "score": 1.0,
+        "weight": 0.15
+      }
+    },
+    "formula_version": "1.0.0"
+  },
+  "limitations": [
+    {
+      "id": "SYSTEMIC_DOMINANCE",
+      "description": "Observation window dominated by SYSTEMIC regime.",
+      "bias_direction": "UNDERSTATED",
+      "bias_magnitude": "Accuracy during NEUTRAL periods higher."
+    }
+  ],
+  "protocol_version": "1.0.0"
+}

@@ -1,0 +1,35 @@
+{
+  "pipeline_meta": {
+    "stages": [
+      {
+        "stage": "LOAD",
+        "status": "PASS"
+      },
+      {
+        "stage": "VALIDATE",
+        "status": "PASS"
+      },
+      {
+        "stage": "FETCH_PRICES",
+        "status": "PASS"
+      },
+      {
+        "stage": "MAINTAIN_PROOF",
+        "status": "PASS"
+      },
+      {
+        "stage": "VALIDATE_REPORT",
+        "status": "INVALID_STATUS"
+      },
+      {
+        "stage": "PUBLISH",
+        "status": "PASS"
+      }
+    ]
+  },
+  "resolution_growth": {
+    "n_new_resolved": -5,
+    "growth_rate": -0.01
+  },
+  "content_hash": "ab"
+}

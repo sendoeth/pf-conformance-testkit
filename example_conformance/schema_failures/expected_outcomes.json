@@ -1,0 +1,19 @@
+{
+  "scenario": "schema_failures",
+  "description": "Signals with missing required fields and invalid values. Schema FAIL, downstream protocols SKIP due to cascade.",
+  "expected_outcomes": {
+    "signal_schema": "FAIL",
+    "routing_protocol": "SKIP",
+    "resolution_protocol": "SKIP",
+    "aggregation_protocol": "SKIP",
+    "proof_protocol": "PASS",
+    "lifecycle_pipeline": "SKIP",
+    "consumer_audit": "PASS",
+    "discovery_protocol": "PASS",
+    "consumer_quickstart": "SKIP",
+    "expected_grade": "F",
+    "cross_protocol_errors": 0
+  },
+  "generator_version": "1.0.0",
+  "generated_at": "2026-03-30T12:00:00Z"
+}

@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "producer_id": "test-producer",
+    "wallet": "rTestWallet123",
+    "generated_at": "2026-03-30T12:00:00Z",
+    "protocol_version": "1.0.0",
+    "signal_schema_version": "1.0.0",
+    "resolution_protocol_version": "1.0.0"
+  },
+  "freshness_metadata": {
+    "last_resolved_at": "2026-03-30T12:00:00Z",
+    "last_update_at": "2026-03-30T12:00:00Z",
+    "staleness_threshold_hours": 24,
+    "freshness_grade": "LIVE",
+    "age_hours": 0.5,
+    "signals_since_last_update": 0
+  },
+  "snapshot_metadata": {
+    "snapshot_id": "snap-001",
+    "snapshot_version": 1,
+    "parent_snapshot_id": null,
+    "n_resolved_total": 500,
+    "n_new_resolved": 50,
+    "n_unresolved_remaining": 20
+  },
+  "resolution_delta": {
+    "cycle_start": "2026-03-29T12:00:00Z",
+    "cycle_end": "2026-03-30T12:00:00Z",
+    "n_attempted": 55,
+    "n_resolved": 50,
+    "n_failed": 3,
+    "n_skipped": 2,
+    "resolution_rate": 0.909,
+    "accuracy_this_cycle": 0.55,
+    "price_data_source": "yahoo_finance"
+  },
+  "rolling_windows": [
+    {
+      "window_id": "7d",
+      "n_signals": 100,
+      "n_resolved": 95,
+      "resolution_rate": 0.95,
+      "accuracy": {
+        "point": 0.55,
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "n": 95
+      },
+      "brier_score": 0.24,
+      "reliability": 0.002,
+      "resolution": 0.008,
+      "calibration_slope": 0.95,
+      "per_symbol": {
+        "BTC": {
+          "accuracy": 0.56,
+          "n": 30,
+          "brier_score": 0.23
+        },
+        "ETH": {
+          "accuracy": 0.55,
+          "n": 25,
+          "brier_score": 0.24
+        },
+        "SOL": {
+          "accuracy": 0.53,
+          "n": 20,
+          "brier_score": 0.25
+        },
+        "LINK": {
+          "accuracy": 0.5700000000000001,
+          "n": 20,
+          "brier_score": 0.23
+        }
+      }
+    },
+    {
+      "window_id": "14d",
+      "n_signals": 200,
+      "n_resolved": 190,
+      "resolution_rate": 0.95,
+      "accuracy": {
+        "point": 0.55,
+        "lower": 0.51,
+        "upper": 0.5900000000000001,
+        "n": 190
+      },
+      "brier_score": 0.24,
+      "reliability": 0.002,
+      "resolution": 0.007,
+      "calibration_slope": 0.96
+    },
+    {
+      "window_id": "30d",
+      "n_signals": 400,
+      "n_resolved": 380,
+      "resolution_rate": 0.95,
+      "accuracy": {
+        "point": 0.55,
+        "lower": 0.52,
+        "upper": 0.5800000000000001,
+        "n": 380
+      },
+      "brier_score": 0.24,
+      "reliability": 0.002,
+      "resolution": 0.006,
+      "calibration_slope": 0.97
+    },
+    {
+      "window_id": "all_time",
+      "n_signals": 550,
+      "n_resolved": 500,
+      "resolution_rate": 0.91,
+      "accuracy": {
+        "point": 0.55,
+        "lower": 0.53,
+        "upper": 0.5700000000000001,
+        "n": 500
+      },
+      "brier_score": 0.24,
+      "reliability": 0.001,
+      "resolution": 0.005,
+      "calibration_slope": 0.98
+    }
+  ],
+  "cusum_state": {
+    "cusum_pos": 0.3,
+    "cusum_neg": 0.2,
+    "drift_status": "STABLE",
+    "drift_detected_at": null,
+    "drift_direction": "none",
+    "target_accuracy": 0.55,
+    "allowance": 0.02,
+    "threshold": 1.5,
+    "observations_since_reset": 100,
+    "run_length": 0
+  },
+  "calibration_trajectory": {
+    "checkpoints": [
+      {
+        "timestamp": "2026-03-01T12:00:00Z",
+        "n_cumulative": 100,
+        "accuracy": 0.51,
+        "brier_score": 0.25,
+        "reliability": 0.003,
+        "calibration_slope": 0.9
+      },
+      {
+        "timestamp": "2026-03-15T12:00:00Z",
+        "n_cumulative": 300,
+        "accuracy": 0.53,
+        "brier_score": 0.24,
+        "reliability": 0.002,
+        "calibration_slope": 0.94
+      },
+      {
+        "timestamp": "2026-03-30T12:00:00Z",
+        "n_cumulative": 500,
+        "accuracy": 0.55,
+        "brier_score": 0.24,
+        "reliability": 0.001,
+        "calibration_slope": 0.98
+      }
+    ],
+    "trend": {
+      "slope_per_day": 0.0005,
+      "p_value": 0.03,
+      "interpretation": "IMPROVING"
+    }
+  },
+  "reputation": {
+    "score": 0.68,
+    "grade": "B",
+    "previous_score": 0.66,
+    "score_delta": 0.02
+  },
+  "limitations": [
+    {
+      "id": "OBSERVATION_WINDOW",
+      "description": "Forward-test period dominated by SYSTEMIC regime. Directional edge observed primarily in NEUTRAL windows.",
+      "bias_direction": "UNDERSTATED",
+      "bias_magnitude": "Accuracy during NEUTRAL periods (58%) higher than aggregate (55%). SYSTEMIC accuracy near 50% baseline drags overall number down."
+    }
+  ],
+  "protocol_version": "1.0.0",
+  "resolved_signals": [
+    {
+      "signal_id": "orphan-001",
+      "symbol": "BTC",
+      "resolved": true,
+      "outcome": 1.0
+    },
+    {
+      "signal_id": "orphan-002",
+      "symbol": "ETH",
+      "resolved": true,
+      "outcome": 0.0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "producer_id": "",
+  "capabilities": [
+    "crypto_signals",
+    "time_travel"
+  ],
+  "symbol_coverage": {
+    "symbols": [
+      "btc",
+      "ETH"
+    ]
+  },
+  "reputation_summary": {
+    "score": 1.5,
+    "grade": "S",
+    "accuracy": 0.55,
+    "n_resolved": 100
+  },
+  "supported_protocols": {},
+  "liveness": {
+    "heartbeat_interval_seconds": 10,
+    "liveness_grade": "ALIVE"
+  },
+  "registration": {
+    "registered_at": "2026-03-30T12:00:00Z",
+    "registrar": "magic",
+    "registration_version": "1.0.0"
+  }
+}

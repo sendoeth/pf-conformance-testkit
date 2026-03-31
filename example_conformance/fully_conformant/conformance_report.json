@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "testkit_version": "1.0.0",
+    "protocol_version": "1.0.0",
+    "generated_at": "2026-03-31T17:03:06.789Z",
+    "started_at": "2026-03-31T17:03:06.788Z",
+    "artifact_source": "local_directory",
+    "artifact_path": "/home/postfiat/pf-conformance-testkit/example_conformance/fully_conformant"
+  },
+  "readiness_grade": {
+    "grade": "B",
+    "composite_score": 0.895,
+    "n_pass": 7,
+    "n_fail": 0,
+    "n_warn": 0,
+    "n_skip": 2,
+    "grade_thresholds": {
+      "A": 0.9,
+      "B": 0.75,
+      "C": 0.55,
+      "D": 0.35,
+      "F": 0.0
+    },
+    "protocol_weights": {
+      "signal_schema": 0.2,
+      "routing_protocol": 0.1,
+      "resolution_protocol": 0.15,
+      "aggregation_protocol": 0.08,
+      "proof_protocol": 0.15,
+      "lifecycle_pipeline": 0.07,
+      "consumer_audit": 0.1,
+      "discovery_protocol": 0.07,
+      "consumer_quickstart": 0.08
+    },
+    "per_protocol_scores": {
+      "signal_schema": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.2
+      },
+      "routing_protocol": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.1
+      },
+      "resolution_protocol": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.15
+      },
+      "aggregation_protocol": {
+        "status": "SKIP",
+        "score": 0.3,
+        "weight": 0.08
+      },
+      "proof_protocol": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.15
+      },
+      "lifecycle_pipeline": {
+        "status": "SKIP",
+        "score": 0.3,
+        "weight": 0.07
+      },
+      "consumer_audit": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.1
+      },
+      "discovery_protocol": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.07
+      },
+      "consumer_quickstart": {
+        "status": "PASS",
+        "score": 1.0,
+        "weight": 0.08
+      }
+    }
+  },
+  "protocol_results": {
+    "signal_schema": {
+      "display_name": "pf-signal-schema",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "n_signals": 30,
+        "n_passed": 30,
+        "n_failed": 0,
+        "pass_rate": 1.0,
+        "level_distribution": {
+          "MINIMAL": 0,
+          "STANDARD": 0,
+          "FULL": 30,
+          "INCOMPLETE": 0
+        },
+        "duplicate_signal_ids": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": []
+    },
+    "routing_protocol": {
+      "display_name": "pf-routing-protocol",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "config_violations": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "signal_schema"
+      ]
+    },
+    "resolution_protocol": {
+      "display_name": "pf-resolution-protocol",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "n_violations": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "signal_schema"
+      ]
+    },
+    "aggregation_protocol": {
+      "display_name": "pf-aggregation-protocol",
+      "status": "SKIP",
+      "violations": [],
+      "details": {
+        "reason": "No aggregation artifacts provided"
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "resolution_protocol",
+        "routing_protocol"
+      ]
+    },
+    "proof_protocol": {
+      "display_name": "pf-proof-protocol",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "n_violations": 0,
+        "freshness_grade": "LIVE",
+        "drift_status": "STABLE"
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "resolution_protocol"
+      ]
+    },
+    "lifecycle_pipeline": {
+      "display_name": "pf-lifecycle-pipeline",
+      "status": "SKIP",
+      "violations": [],
+      "details": {
+        "reason": "No lifecycle report provided"
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "proof_protocol"
+      ]
+    },
+    "consumer_audit": {
+      "display_name": "pf-consumer-audit",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "n_violations": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "proof_protocol",
+        "routing_protocol",
+        "aggregation_protocol"
+      ]
+    },
+    "discovery_protocol": {
+      "display_name": "pf-discovery-protocol",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "entry_violations": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "resolution_protocol",
+        "proof_protocol"
+      ]
+    },
+    "consumer_quickstart": {
+      "display_name": "pf-consumer-quickstart",
+      "status": "PASS",
+      "violations": [],
+      "details": {
+        "n_violations": 0
+      },
+      "n_errors": 0,
+      "n_warnings": 0,
+      "dependencies": [
+        "signal_schema",
+        "routing_protocol",
+        "resolution_protocol",
+        "aggregation_protocol",
+        "proof_protocol",
+        "lifecycle_pipeline",
+        "consumer_audit",
+        "discovery_protocol"
+      ]
+    }
+  },
+  "cross_protocol_checks": {
+    "violations": [],
+    "n_errors": 0,
+    "n_warnings": 0,
+    "n_info": 0
+  },
+  "summary": {
+    "total_protocols": 9,
+    "passed": 7,
+    "warned": 0,
+    "failed": 0,
+    "skipped": 2,
+    "total_violations": 0,
+    "total_errors": 0,
+    "total_warnings": 0
+  },
+  "limitations": [],
+  "protocol_version": "1.0.0"
+}

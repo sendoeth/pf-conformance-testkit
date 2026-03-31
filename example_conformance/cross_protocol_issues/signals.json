@@ -1,0 +1,252 @@
+[
+  {
+    "signal_id": "test-BTC-0000",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "5e85fd0e22f2345849d26e9d8485fc781effc0b26b00e92dcb95e4b1e5656f5c"
+  },
+  {
+    "signal_id": "test-BTC-0001",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "4838fca80bd2413761b7c23c88a677c186018e0a9f28db66bf3e3ceff04bc206"
+  },
+  {
+    "signal_id": "test-BTC-0002",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "389f1f171aae1fb4db156d24648688a8aebf316962402cdbb34df505acf328d0"
+  },
+  {
+    "signal_id": "test-BTC-0003",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "ac52b9ecb0e46b267e42f95a5e467894035926b1ac99754ff6ab31d9b986a9f9"
+  },
+  {
+    "signal_id": "test-BTC-0004",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "d14ef8929ab87a22945b0467fe3d8c7f01a3860a71271445562491cc57fb71a3"
+  },
+  {
+    "signal_id": "test-BTC-0005",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "2d7afe0c919cc29bfb88415a0a37207059e4ec3daeba674d1f4654b210c11b27"
+  },
+  {
+    "signal_id": "test-BTC-0006",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "a0ff2eee5c0b2beeb32e434dc961bf2c878a86292bcaa50975805a6019742fea"
+  },
+  {
+    "signal_id": "test-BTC-0007",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "b55766fd2529a8f09f7d0364143fb8a6d83cf9b9502a4a4335665eb067b74d69"
+  },
+  {
+    "signal_id": "test-BTC-0008",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "5c72b3706fe90f137caa17cc357c4a5c99aefed53b8b49727f6269df9480236a"
+  },
+  {
+    "signal_id": "test-BTC-0009",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "440ef74519ac3f6c2e9be2ba1d44a15b3cb330cd3fab2882faad84200baf48e7"
+  }
+]
