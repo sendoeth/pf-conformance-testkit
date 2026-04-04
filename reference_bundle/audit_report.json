@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "audit_version": "1.0.0",
+    "generated_at": "2026-03-30T12:00:00Z",
+    "producer_id": "test-producer",
+    "companion_versions": {
+      "signal_schema": "1.0.0",
+      "resolution_protocol": "1.0.0",
+      "routing_protocol": "1.0.0",
+      "aggregation_protocol": "1.0.0",
+      "proof_protocol": "1.0.0",
+      "lifecycle_pipeline": "1.0.0"
+    }
+  },
+  "schema_compliance": {
+    "signal_schema": {
+      "status": "PASS",
+      "valid_signals": 500,
+      "invalid_signals": 0
+    },
+    "proof_surface": {
+      "status": "PASS",
+      "n_schema_errors": 0
+    },
+    "routing_config": {
+      "status": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "freshness_verification": {
+    "status": "PASS",
+    "freshness_grade": "LIVE",
+    "age_hours": 0.5
+  },
+  "reputation_recomputation": {
+    "status": "PASS",
+    "claimed_score": 0.68,
+    "recomputed_score": 0.68,
+    "score_discrepancy": 0.0
+  },
+  "drift_verification": {
+    "status": "PASS",
+    "drift_status": "STABLE",
+    "cusum_pos": 0.3,
+    "cusum_neg": 0.2
+  },
+  "routing_audit": {
+    "status": "PASS",
+    "filter_rate": 0.15,
+    "total_signals_routed": 500
+  },
+  "aggregation_inspection": {
+    "status": "SKIP",
+    "reason": "No registry provided"
+  },
+  "trust_grade": {
+    "score": 0.93,
+    "grade": "A",
+    "verdict": "TRUST",
+    "components": {
+      "schema_compliance": {
+        "score": 1.0,
+        "weight": 0.15,
+        "weighted": 0.15
+      },
+      "freshness": {
+        "score": 1.0,
+        "weight": 0.15,
+        "weighted": 0.15
+      },
+      "drift_health": {
+        "score": 1.0,
+        "weight": 0.15,
+        "weighted": 0.15
+      },
+      "reputation_consistency": {
+        "score": 1.0,
+        "weight": 0.2,
+        "weighted": 0.2
+      },
+      "signal_volume": {
+        "score": 1.0,
+        "weight": 0.1,
+        "weighted": 0.1
+      },
+      "calibration_quality": {
+        "score": 0.85,
+        "weight": 0.15,
+        "weighted": 0.1275
+      },
+      "routing_discipline": {
+        "score": 0.8,
+        "weight": 0.1,
+        "weighted": 0.08
+      }
+    },
+    "cold_start": false
+  },
+  "findings": [],
+  "summary": {
+    "total_checks": 25,
+    "passed": 24,
+    "failed": 0,
+    "warnings": 1,
+    "skipped": 0,
+    "total_findings": 0
+  },
+  "limitations": []
+}

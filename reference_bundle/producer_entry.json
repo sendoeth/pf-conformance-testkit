@@ -1,0 +1,59 @@
+{
+  "producer_id": "test-producer",
+  "display_name": "Test Signal Producer",
+  "description": "Conformance test producer for protocol validation.",
+  "endpoint_url": "http://localhost:8080",
+  "repository_url": "https://github.com/test/test-signals",
+  "capabilities": [
+    "crypto_signals",
+    "regime_detection",
+    "routing_policy",
+    "weak_symbol_policy",
+    "proof_surface",
+    "multi_symbol"
+  ],
+  "symbol_coverage": {
+    "symbols": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "LINK"
+    ],
+    "symbol_count": 4
+  },
+  "reputation_summary": {
+    "score": 0.68,
+    "grade": "B",
+    "accuracy": 0.55,
+    "calibration": 0.97,
+    "n_resolved": 500,
+    "last_resolved_at": "2026-03-30T12:00:00Z"
+  },
+  "proof_summary": {
+    "proof_surface_url": "https://raw.githubusercontent.com/test/test-signals/proof_surface.json",
+    "freshness_grade": "LIVE",
+    "drift_status": "STABLE",
+    "last_update_at": "2026-03-30T12:00:00Z"
+  },
+  "supported_protocols": {
+    "signal_schema": "1.0.0",
+    "resolution_protocol": "1.0.0",
+    "routing_protocol": "1.0.0",
+    "aggregation_protocol": "1.0.0",
+    "proof_protocol": "1.0.0",
+    "lifecycle_pipeline": "1.0.0",
+    "consumer_audit": "1.0.0",
+    "discovery_protocol": "1.0.0"
+  },
+  "liveness": {
+    "heartbeat_interval_seconds": 900,
+    "last_heartbeat_at": "2026-03-30T12:00:00Z",
+    "liveness_grade": "ALIVE",
+    "consecutive_misses": 0
+  },
+  "registration": {
+    "registered_at": "2026-03-01T00:00:00Z",
+    "registrar": "self_attestation",
+    "registration_version": "1.0.0"
+  }
+}
