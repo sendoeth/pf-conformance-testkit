@@ -19,6 +19,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install test dependencies
+        run: pip install pytest
+
       - name: Run conformance validator against reference bundle
         run: |
           python3 conformance_testkit.py reference_bundle/ \
