@@ -1,0 +1,782 @@
+[
+  {
+    "signal_id": "test-BTC-0000",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "5e85fd0e22f2345849d26e9d8485fc781effc0b26b00e92dcb95e4b1e5656f5c"
+  },
+  {
+    "signal_id": "test-BTC-0001",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "4838fca80bd2413761b7c23c88a677c186018e0a9f28db66bf3e3ceff04bc206"
+  },
+  {
+    "signal_id": "test-BTC-0002",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "389f1f171aae1fb4db156d24648688a8aebf316962402cdbb34df505acf328d0"
+  },
+  {
+    "signal_id": "test-BTC-0003",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "ac52b9ecb0e46b267e42f95a5e467894035926b1ac99754ff6ab31d9b986a9f9"
+  },
+  {
+    "signal_id": "test-BTC-0004",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "d14ef8929ab87a22945b0467fe3d8c7f01a3860a71271445562491cc57fb71a3"
+  },
+  {
+    "signal_id": "test-BTC-0005",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "2d7afe0c919cc29bfb88415a0a37207059e4ec3daeba674d1f4654b210c11b27"
+  },
+  {
+    "signal_id": "test-BTC-0006",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "a0ff2eee5c0b2beeb32e434dc961bf2c878a86292bcaa50975805a6019742fea"
+  },
+  {
+    "signal_id": "test-BTC-0007",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "b55766fd2529a8f09f7d0364143fb8a6d83cf9b9502a4a4335665eb067b74d69"
+  },
+  {
+    "signal_id": "test-BTC-0008",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "5c72b3706fe90f137caa17cc357c4a5c99aefed53b8b49727f6269df9480236a"
+  },
+  {
+    "signal_id": "test-BTC-0009",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.62,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "440ef74519ac3f6c2e9be2ba1d44a15b3cb330cd3fab2882faad84200baf48e7"
+  },
+  {
+    "signal_id": "test-ETH-0010",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "6d33b0ad5944e35ae74ee0b565d196712f3a1c3c1ca3bb4588748c1799d8fa6f"
+  },
+  {
+    "signal_id": "test-ETH-0011",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "339f0405f4d73999932401f475e8b044ffa241206c0b9a6537c7567cb86d1c5e"
+  },
+  {
+    "signal_id": "test-ETH-0012",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "f4b885221655061e8d17d247ea9b1abaa4f6878157e3bd7803374fd51c25ce2b"
+  },
+  {
+    "signal_id": "test-ETH-0013",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "582cbc948175dad264d78a75ebea00a18afac1250743148b9061c6df559141b8"
+  },
+  {
+    "signal_id": "test-ETH-0014",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "e78a782fb7a8e4785e42a8226df50752d7f1427a47458043196cc6f117c5aab5"
+  },
+  {
+    "signal_id": "test-ETH-0015",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "8488a791a8a0afadf0af808eb3090713ccd1419c24f8de57e4bc4999e6983903"
+  },
+  {
+    "signal_id": "test-ETH-0016",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "a7238b361f9a48017a00fcb06153715f413a251a67b6019a15326961b3122482"
+  },
+  {
+    "signal_id": "test-ETH-0017",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "c509b2846b84e964c99df40e02541e5353c51ac4cf683971b25857aaa99c36d8"
+  },
+  {
+    "signal_id": "test-ETH-0018",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "9e1457ea053e258b7ed958bf9c52097bb24318f02d4d37a7c083a80c89c15fc2"
+  },
+  {
+    "signal_id": "test-ETH-0019",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.58,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "d4d016788b30345971041571f86fc3c508dfba58fb409f042705906e4df1edec"
+  },
+  {
+    "signal_id": "test-SOL-0020",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.55,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "1add30ef209566d038652ab78ed9ee0b895caf058783d82f542d9f822abcccb1",
+    "weak_symbol": {
+      "weakness_score": 0.7,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "test-SOL-0021",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.55,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "8ec014e134a33e4d50b3d92cb33058a267731d0208eaf7dce97990792a572719",
+    "weak_symbol": {
+      "weakness_score": 0.7,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "test-SOL-0022",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.55,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "d068be6ba17a4a2d2caf7f2562546f278f77bf97d2ffed6ebe937c5ccfe08262",
+    "weak_symbol": {
+      "weakness_score": 0.7,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "test-SOL-0023",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.55,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "3c30a738939d0559fbae6edf4380c382dfd0bbefa78c16ab703ccfa1fe0d5dac",
+    "weak_symbol": {
+      "weakness_score": 0.7,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "test-SOL-0024",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.55,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "79b6e791144d1a8da51d62943bc29c00c4d747219bb1ad6336afa43acf319f4e",
+    "weak_symbol": {
+      "weakness_score": 0.7,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "test-LINK-0025",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "LINK",
+    "direction": "bullish",
+    "confidence": 0.6,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "faeb447956ce857b36dd39c1d7f579bef27ace07372ce70ba663eb2cfbd72815"
+  },
+  {
+    "signal_id": "test-LINK-0026",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "LINK",
+    "direction": "bullish",
+    "confidence": 0.6,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "867bffd623e0df3760e6692f89797bf1f792aa07b9be1ca33256f99dea75f358"
+  },
+  {
+    "signal_id": "test-LINK-0027",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "LINK",
+    "direction": "bullish",
+    "confidence": 0.6,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "ca50b8c30dcf238bedc3e400c8efd3f820b0441e4130b0e0c34ad103fb9139a1"
+  },
+  {
+    "signal_id": "test-LINK-0028",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "LINK",
+    "direction": "bullish",
+    "confidence": 0.6,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "d0692d004065584bdd92af1a03cc84d4eed31eb28dacb3b8dc5a930696de0e1c"
+  },
+  {
+    "signal_id": "test-LINK-0029",
+    "producer_id": "test-producer",
+    "timestamp": "2026-03-30T12:00:00Z",
+    "symbol": "LINK",
+    "direction": "bullish",
+    "confidence": 0.6,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "NEUTRAL",
+      "regime_confidence": 0.85,
+      "proximity": 0.3,
+      "duration_days": 20,
+      "decision": "EXECUTE"
+    },
+    "calibration": {
+      "method": "empirical_conditional",
+      "sample_size": 200,
+      "empirical_hit_rate": 0.52,
+      "brier_score": 0.24
+    },
+    "attribution_hash": "746518874eb5fa22f2b2bb7dd8d546972dd8a42a7d72b8f94a4b6979d53b2448"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "manifest_version": "1.0.0",
+  "description": "Pinned canonical contract reference. A deterministic artifact set representing a fully conformant producer. CI validates that the conformance testkit produces these exact outcomes against this bundle. Any deviation from the expected statuses or grade constitutes contract drift and blocks the build.",
+  "expected_outcomes": {
+    "readiness_grade": "B",
+    "minimum_composite_score": 0.85,
+    "protocol_statuses": {
+      "signal_schema": "PASS",
+      "routing_protocol": "PASS",
+      "resolution_protocol": "PASS",
+      "aggregation_protocol": "SKIP",
+      "proof_protocol": "PASS",
+      "lifecycle_pipeline": "SKIP",
+      "consumer_audit": "PASS",
+      "discovery_protocol": "PASS",
+      "consumer_quickstart": "PASS"
+    },
+    "max_errors": 0,
+    "max_fails": 0
+  },
+  "artifacts": [
+    "signals.json",
+    "proof_surface.json",
+    "routing_policy.json",
+    "resolution_report.json",
+    "producer_entry.json",
+    "consumer_verdict.json",
+    "audit_report.json"
+  ],
+  "pinned_at": "2026-04-04T00:00:00Z",
+  "testkit_version": "1.0.0",
+  "protocol_version": "1.0.0"
+}

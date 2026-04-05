@@ -1,0 +1,45 @@
+name: Conformance Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  conformance-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: pip install pytest
+
+      - name: Run conformance validator against reference bundle
+        run: |
+          python3 conformance_testkit.py reference_bundle/ \
+            -o conformance_report.json --validate
+
+      - name: Enforce contract manifest (detect drift)
+        run: |
+          python3 ci_check_manifest.py \
+            conformance_report.json \
+            reference_bundle/contract_manifest.json
+
+      - name: Upload conformance report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: conformance-report
+          path: conformance_report.json
+          retention-days: 90
+
+      - name: Run test suite
+        run: python3 -m pytest tests/ -v

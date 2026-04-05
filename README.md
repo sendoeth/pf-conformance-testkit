@@ -232,13 +232,57 @@ Add `resolution_report.json` and `producer_entry.json`. Cross-protocol checks wi
 
 Provide all available artifacts. Target Grade B or above. Fix violations in dependency order (schema first, then routing, then downstream).
 
+## CI Conformance Gate
+
+This repo enforces the canonical producer contract via a GitHub Actions workflow that runs on every push and pull request. The workflow validates a pinned reference artifact bundle against the conformance testkit and fails the build on any contract drift.
+
+### How It Works
+
+1. **Reference bundle** (`reference_bundle/`) — deterministic set of producer artifacts representing the canonical contract at v1.0.0
+2. **Contract manifest** (`reference_bundle/contract_manifest.json`) — declares expected grade, per-protocol statuses, composite score floor, and error/fail ceilings
+3. **Conformance validator** runs against the reference bundle and emits a machine-readable JSON report
+4. **Manifest checker** (`ci_check_manifest.py`) compares the report against the manifest — any deviation (grade change, status flip, score regression) = contract drift = build failure
+5. **Report artifact** — the JSON conformance report is uploaded as a build artifact for reviewer inspection
+
+### Pass/Fail Rule
+
+The build **passes** when ALL of the following hold:
+- Readiness grade matches the manifest (currently: **B**)
+- Composite score >= manifest floor (currently: **0.85**)
+- Every protocol status matches the manifest exactly (7 PASS, 2 SKIP)
+- Total errors <= manifest ceiling (currently: **0**)
+- Total fails <= manifest ceiling (currently: **0**)
+
+The build **fails** on any single deviation. Even "improvements" (e.g., SKIP→PASS) are flagged as drift because the manifest is the explicit contract.
+
+### Run Locally
+
+```bash
+# Full CI gate in two commands:
+python3 conformance_testkit.py reference_bundle/ -o conformance_report.json --validate
+python3 ci_check_manifest.py conformance_report.json reference_bundle/contract_manifest.json
+```
+
+Exit code 0 = pass, 1 = contract drift detected.
+
+### Reuse in Another Repo
+
+To add the same conformance gate to any other protocol repo:
+
+1. Copy `conformance_testkit.py`, `ci_check_manifest.py`, and `reference_bundle/` into your repo
+2. Copy `.github/workflows/conformance-gate.yml`
+3. Adjust `reference_bundle/contract_manifest.json` to match your expected outcomes
+4. Push — the workflow runs automatically on push and pull request
+
+No external dependencies required. Pure Python 3.8+ stdlib.
+
 ## Tests
 
 ```bash
 python3 -m pytest tests/ -v
 ```
 
-138 tests across 16 test classes covering:
+164 tests across 24 test classes covering:
 - Per-protocol validation (9 validators)
 - Cross-protocol consistency detection
 - Dependency-ordered cascade behavior
@@ -248,6 +292,8 @@ python3 -m pytest tests/ -v
 - Limitation detection with bias direction
 - Remote endpoint timeout handling
 - Directory artifact loading
+- CI manifest drift detection (grade, score, status, error/fail ceilings)
+- Reference bundle integrity and end-to-end conformance
 
 ## Zero External Dependencies
 

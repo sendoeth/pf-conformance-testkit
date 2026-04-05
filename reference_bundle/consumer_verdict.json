@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "quickstart_version": "1.0.0",
+    "protocol_version": "1.0.0",
+    "generated_at": "2026-03-30T12:00:00Z",
+    "producer_id": "test-producer",
+    "content_hash": "abcdef1234567890"
+  },
+  "verdict": {
+    "trust_score": 0.76,
+    "trust_grade": "B",
+    "trust_verdict": "TRUST"
+  },
+  "stages": [
+    {
+      "stage": "discovery",
+      "status": "PASS",
+      "duration_ms": 50
+    },
+    {
+      "stage": "signal_fetch",
+      "status": "PASS",
+      "duration_ms": 30
+    },
+    {
+      "stage": "schema_validation",
+      "status": "PASS",
+      "duration_ms": 120
+    },
+    {
+      "stage": "routing_audit",
+      "status": "PASS",
+      "duration_ms": 80
+    },
+    {
+      "stage": "resolution_verification",
+      "status": "PASS",
+      "duration_ms": 200
+    },
+    {
+      "stage": "proof_verification",
+      "status": "PASS",
+      "duration_ms": 60
+    },
+    {
+      "stage": "full_audit",
+      "status": "PASS",
+      "duration_ms": 40
+    }
+  ],
+  "trust_components": {
+    "schema_compliance": {
+      "score": 1.0,
+      "weight": 0.15,
+      "weighted": 0.15
+    },
+    "freshness": {
+      "score": 1.0,
+      "weight": 0.15,
+      "weighted": 0.15
+    },
+    "reputation": {
+      "score": 0.68,
+      "weight": 0.2,
+      "weighted": 0.136
+    },
+    "drift_stability": {
+      "score": 1.0,
+      "weight": 0.15,
+      "weighted": 0.15
+    },
+    "routing_discipline": {
+      "score": 0.8,
+      "weight": 0.1,
+      "weighted": 0.08
+    },
+    "discovery_health": {
+      "score": 1.0,
+      "weight": 0.1,
+      "weighted": 0.1
+    },
+    "signal_volume": {
+      "score": 1.0,
+      "weight": 0.15,
+      "weighted": 0.15
+    }
+  },
+  "findings": [],
+  "limitations": []
+}
