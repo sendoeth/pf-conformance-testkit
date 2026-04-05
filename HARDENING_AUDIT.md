@@ -24,6 +24,15 @@ Signal Generation → Schema Validation (pf-signal-schema)
   → Conformance Validation (pf-conformance-testkit)
 ```
 
+## Fix Commits
+
+| Case(s) | Repo | Commit |
+|---------|------|--------|
+| ADV-001, ADV-002, ADV-005, ADV-007 | pf-routing-protocol | [`267c918`](https://github.com/sendoeth/pf-routing-protocol/commit/267c918) |
+| ADV-003 | pf-consumer-quickstart | [`7dcee56`](https://github.com/sendoeth/pf-consumer-quickstart/commit/7dcee56) |
+| ADV-004 | pf-conformance-testkit | [`6b42407`](https://github.com/sendoeth/pf-conformance-testkit/commit/6b42407) |
+| ADV-006 | pf-proof-protocol | [`79389c4`](https://github.com/sendoeth/pf-proof-protocol/commit/79389c4) |
+
 ## Adversarial Cases
 
 ### ADV-001: Zero-confidence signal passes VOI gate
@@ -58,8 +67,8 @@ Signal Generation → Schema Validation (pf-signal-schema)
 
 | Phase | Status | Observed |
 |-------|--------|----------|
-| Before Fix | **PASS** | action=WITHHOLD, voi=0.0. Zero-confidence signal was WITHHELD. Correctly withheld. |
-| After Fix | **PASS** | action=WITHHOLD, voi=0.0. Zero-confidence signal correctly withheld after strict VOI comparison. |
+| Before Fix | **FAIL** | VOI gate uses `>= 0.0` comparison. `compute_voi(accuracy, 0.0)` = 0.0, and `0.0 >= 0.0` is True → signal EMITs. Zero-information signal passes to downstream consumers. |
+| After Fix | **PASS** | VOI gate now uses strict `>` comparison ([`267c918`](https://github.com/sendoeth/pf-routing-protocol/commit/267c918)). `0.0 > 0.0` is False → WITHHOLD. `compute_voi` also sets `zero_confidence: true` flag. |
 
 ---
 
@@ -112,7 +121,7 @@ Signal Generation → Schema Validation (pf-signal-schema)
 | Phase | Status | Observed |
 |-------|--------|----------|
 | Before Fix | **FAIL** | Hazard adjustment silently skipped for DIVERGENCE regime (not in weibull_params or incomplete params). No warning in output. |
-| After Fix | **PASS** | Hazard adjustment skipped (incomplete params), warning emitted. Graceful fallback to non-hazard VOI. |
+| After Fix | **PASS** | Hazard adjustment skipped (incomplete params), `hazard_skipped: true` + `hazard_skip_reason` emitted ([`267c918`](https://github.com/sendoeth/pf-routing-protocol/commit/267c918)). `INCOMPLETE_HAZARD_PARAMS` limitation added to report. Graceful fallback to non-hazard VOI. |
 
 ---
 
@@ -139,7 +148,7 @@ Signal Generation → Schema Validation (pf-signal-schema)
 | Phase | Status | Observed |
 |-------|--------|----------|
 | Before Fix | **FAIL** | quickstart.py:707 uses tolerance_hours=1.5 (5400s). maintain_proof.py:363 uses gap <= 7200 (2.0h). Same signal at 1.75h gap resolves in maintain_proof (within 7200s) but fails in quickstart (exceeds 5400s). Cross-protocol inconsistency confirmed. |
-| After Fix | **PASS** | Tolerances unified: quickstart uses tolerance_hours=2.0 (7200s), maintain_proof uses 7200s. Both now consistent. |
+| After Fix | **PASS** | Tolerances unified ([`7dcee56`](https://github.com/sendoeth/pf-consumer-quickstart/commit/7dcee56)): quickstart now uses tolerance_hours=2.0 (7200s), matching maintain_proof's 7200s. Both consistent. |
 
 ---
 
@@ -168,7 +177,7 @@ Signal Generation → Schema Validation (pf-signal-schema)
 | Phase | Status | Observed |
 |-------|--------|----------|
 | Before Fix | **FAIL** | Declared brier=0.234, expected=0.2430, gap=0.0090. Tolerance=0.01. PASSES identity check. Fabricated Brier score (3.7% error) slips through. |
-| After Fix | **PASS** | Gap=0.0090. New tolerance=0.005. FAILS tightened check. Fabricated Brier score now correctly detected. |
+| After Fix | **PASS** | Gap=0.0090. Tolerance tightened to 0.005 ([`6b42407`](https://github.com/sendoeth/pf-conformance-testkit/commit/6b42407)). FAILS identity check. Fabricated Brier score now correctly detected. |
 
 ---
 
@@ -200,7 +209,7 @@ Signal Generation → Schema Validation (pf-signal-schema)
 | Phase | Status | Observed |
 |-------|--------|----------|
 | Before Fix | **FAIL** | action=WITHHOLD, rationale='WITHHOLD: regime UNKNOWN not in allowed list ['NEUTRAL', 'DIVERGENCE']'. Null regime_context → UNKNOWN regime → no warning about null context. Signal withheld because UNKNOWN not in allowed_regimes, but rationale doesn't explain the null-context root cause. |
-| After Fix | **PASS** | Warning about null/missing regime_context now present. |
+| After Fix | **PASS** | `UNKNOWN_REGIME` limitation emitted with `"Regime is UNKNOWN — may indicate null or missing regime_context"` ([`267c918`](https://github.com/sendoeth/pf-routing-protocol/commit/267c918)). Root cause now visible in report. |
 
 ---
 
@@ -236,8 +245,8 @@ Signal Generation → Schema Validation (pf-signal-schema)
 
 | Phase | Status | Observed |
 |-------|--------|----------|
-| Before Fix | **FAIL** | Signal rejected by resolution (reason: schema_validation_failed), but NOT because of schema validation. maintain_proof has no schema check — rejection was due to missing price data, not invalid confidence=5.0. |
-| After Fix | **PASS** | Signal with confidence=5.0 rejected by schema validation at intake. maintain_proof now validates before processing. |
+| Before Fix | **FAIL** | maintain_proof.py has no schema validation. Signal with confidence=5.0 and symbol=INVALID_TICKER_XYZ enters resolution pipeline unchecked. Rejection occurs downstream (missing price data), not at intake. Invalid confidence corrupts Brier/accuracy if prices happen to exist. |
+| After Fix | **PASS** | Lightweight intake validation added ([`79389c4`](https://github.com/sendoeth/pf-proof-protocol/commit/79389c4)): checks `0 <= confidence <= 1` and `symbol in {BTC, ETH, SOL, LINK}`. Returns `resolution_reason: "schema_validation_failed"` before processing. |
 
 ---
 
@@ -273,8 +282,8 @@ Signal Generation → Schema Validation (pf-signal-schema)
 
 | Phase | Status | Observed |
 |-------|--------|----------|
-| Before Fix | **PASS** | Duration 12.0d with gap [10, 15) → assigned bucket 'unknown'.  |
-| After Fix | **PASS** | Duration in gap now returns 'unknown' instead of last bucket. |
+| Before Fix | **FAIL** | `assign_duration_bucket(12.0, buckets)` falls through all buckets (12 not in [0,10) or [15,9999)). Returns `buckets[-1]["label"]` = "late" silently. VOI accuracy estimate drawn from wrong bucket with no warning. |
+| After Fix | **PASS** | Gap detection added ([`267c918`](https://github.com/sendoeth/pf-routing-protocol/commit/267c918)). Returns `"unknown"` for uncovered durations. Overflow beyond all `max_days` still returns last bucket (correct). |
 
 ---
 
