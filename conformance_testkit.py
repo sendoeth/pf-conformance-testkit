@@ -750,7 +750,7 @@ class ResolutionProtocolValidator:
             if all(isinstance(v, (int, float)) for v in [bs, rel, res, unc] if v is not None):
                 if bs is not None and rel is not None and res is not None and unc is not None:
                     expected = rel - res + unc
-                    if abs(bs - expected) > 0.01:
+                    if abs(bs - expected) > 0.005:
                         violations.append(Violation(
                             "resolution_protocol", "$.overall",
                             f"Brier identity violated: brier_score({bs:.4f}) != reliability({rel:.4f}) - resolution({res:.4f}) + uncertainty({unc:.4f}) = {expected:.4f}",
